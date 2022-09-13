@@ -1,0 +1,30 @@
+-- SELECT * FROM ds_salaries.ds_salaries;
+-- ALTER TABLE ds_salaries.ds_salaries
+-- CHANGE MyUnknownColumn employee_id INTEGER;
+-- SELECT * FROM ds_salaries.ds_salaries;
+-- DESCRIBE ds_salaries.ds_salaries;
+-- SELECT * FROM ds_salaries.ds_salaries WHERE employee_id IS NULL;
+-- BELOW QUERY TO GET NO. OF RECORDS OR ROWS IN DATA
+-- SELECT COUNT(*) AS number_of_rows
+-- FROM ds_salaries.ds_salaries;
+-- BELOW QUERY TO GET TOP 5 MOST POPULAR JOB TITLES IN DATASET
+-- SELECT job_title,count(job_title) as count
+-- FROM ds_salaries.ds_salaries
+-- GROUP BY job_title
+-- ORDER BY count DESC
+-- LIMIT 5;
+-- BELOW QUERY TO FIND NO. OF PEOPLE PER EXPERIENCE LEVEL
+-- SELECT experience_level,count(experience_level) as count
+-- FROM ds_salaries.ds_salaries
+-- GROUP BY experience_level
+-- ORDER BY count DESC;
+-- BELOW QUERY TO FIND AVERAGE SALARY FOR EACH EXPERIENCE_LEVEL
+-- SELECT experience_level,ROUND(AVG(salary_in_usd),2) AS salary_in_usd_avg
+-- FROM ds_salaries.ds_salaries
+-- GROUP BY experience_level
+-- ORDER BY salary_in_usd_avg DESC;
+-- BELOW QUERY TO FIND HOW AVERAGE SALARY HAS BEHAVED OVER THE YEARS.
+-- SELECT work_year,ROUND(AVG(salary_in_usd),2) AS salary_in_usd_average
+-- FROM ds_salaries.ds_salaries
+-- GROUP BY work_year
+-- ORDER BY salary_in_usd_average;
